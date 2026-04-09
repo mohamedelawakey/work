@@ -15,7 +15,7 @@ const headerHTML = `
             <li><a href="index.html" id="nav-home">الرئيسية</a></li>
             <li><a href="investigations.html" id="nav-investigations">تحقيقات</a></li>
             <li><a href="reports.html" id="nav-reports">تقارير</a></li>
-            <li><a href="#" id="nav-news">أخبار</a></li>
+            <li><a href="news.html" id="nav-news">أخبار</a></li>
             <li><a href="#" id="nav-interviews">حوارات</a></li>
             <li><a href="#" id="nav-problems">أبرز المشكلات</a></li>
             <li><a href="#" id="nav-about">من نحن..؟</a></li>
@@ -65,7 +65,7 @@ const footerHTML = `
           <div class="footer-links-wrapper">
             <ul class="footer-links right-links">
               <li><a href="index.html">الرئيسية</a></li>
-              <li><a href="#">أخبار.</a></li>
+              <li><a href="news.html">أخبار.</a></li>
               <li><a href="reports.html">التقارير</a></li>
             </ul>
             <ul class="footer-links left-links">
