@@ -17,8 +17,8 @@ const headerHTML = `
             <li><a href="reports.html" id="nav-reports">تقارير</a></li>
             <li><a href="news.html" id="nav-news">أخبار</a></li>
             <li><a href="interviews.html" id="nav-interviews">حوارات</a></li>
-            <li><a href="#" id="nav-problems">أبرز المشكلات</a></li>
-            <li><a href="#" id="nav-about">من نحن..؟</a></li>
+            <li><a href="problems.html" id="nav-problems">أبرز المشكلات</a></li>
+            <li><a href="about.html" id="nav-about">من نحن..؟</a></li>
           </ul>
         </nav>
 
