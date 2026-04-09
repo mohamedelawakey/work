@@ -1,0 +1,261 @@
+/* investigations.css */
+
+.investigations-page {
+  padding: 40px 0;
+  background-color: #ffffff; /* White background based on screenshot */
+}
+
+.page-title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.page-title span {
+  color: var(--secondary-color);
+  margin: 0 10px;
+}
+
+.investigations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.investigation-card {
+  background-color: #f8fafc; /* Very light blue/gray background */
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-image-wrapper {
+  position: relative;
+  background-color: transparent;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.badge.top-badge {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  border-radius: 4px;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); /* slight angled edge if needed, simple rectangle in design though */
+  z-index: 2;
+}
+
+/* Card Placeholder styles copied/adapted from hero slider for consistency */
+.card-image-placeholder {
+  background-color: white;
+  border: 3px solid var(--secondary-color);
+  border-radius: var(--border-radius-lg);
+  width: 60%;
+  padding: 20px;
+  position: relative;
+}
+
+.card-header-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.avatar-placeholder {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+}
+
+.lines-placeholder {
+  flex: 1;
+}
+
+.line {
+  height: 8px;
+  background-color: #cbd5e1;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.line.long {
+  width: 60%;
+}
+.line.medium {
+  width: 40%;
+}
+
+.image-placeholder {
+  background-color: #e2e8f0;
+  height: 120px;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #64748b;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  right: 10px;
+  height: 60px;
+  background: #64748b;
+  clip-path: polygon(20% 100%, 50% 0%, 80% 100%);
+  opacity: 0.8;
+}
+.image-placeholder::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  right: 30px;
+  height: 40px;
+  background: #475569;
+  clip-path: polygon(30% 100%, 70% 0%, 100% 100%);
+  opacity: 0.9;
+  z-index: 1;
+}
+.image-placeholder i {
+    display: none;
+}
+
+.card-footer-placeholder {
+  margin-top: 10px;
+}
+
+.card-image-wrapper .plus-icon {
+  position: absolute;
+  bottom: 0px;
+  right: 18%; /* Adjust based on placeholder width */
+  width: 35px;
+  height: 35px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 3px solid #f8fafc; /* match card background */
+  z-index: 3;
+}
+
+.card-content {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+.card-meta .author {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-meta .author i {
+  font-size: 1.1rem;
+}
+
+.card-meta .date {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+  flex-direction: row-reverse; /* For RTL order 1 2 3 ... */
+}
+
+.page-num {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #f1f5f9;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.page-num:hover {
+  background-color: #e2e8f0;
+}
+
+.page-num.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.dots {
+  color: #94a3b8;
+  letter-spacing: 2px;
+  margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .investigations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .card-image-placeholder {
+    width: 80%;
+  }
+  .card-image-wrapper .plus-icon {
+      right: 8%;
+  }
+}
