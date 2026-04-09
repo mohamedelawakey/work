@@ -14,7 +14,7 @@ const headerHTML = `
           <ul>
             <li><a href="index.html" id="nav-home">الرئيسية</a></li>
             <li><a href="investigations.html" id="nav-investigations">تحقيقات</a></li>
-            <li><a href="#" id="nav-reports">تقارير</a></li>
+            <li><a href="reports.html" id="nav-reports">تقارير</a></li>
             <li><a href="#" id="nav-news">أخبار</a></li>
             <li><a href="#" id="nav-interviews">حوارات</a></li>
             <li><a href="#" id="nav-problems">أبرز المشكلات</a></li>
@@ -66,7 +66,7 @@ const footerHTML = `
             <ul class="footer-links right-links">
               <li><a href="index.html">الرئيسية</a></li>
               <li><a href="#">أخبار.</a></li>
-              <li><a href="#">التقارير</a></li>
+              <li><a href="reports.html">التقارير</a></li>
             </ul>
             <ul class="footer-links left-links">
               <li><a href="#">إنتاج واستثمار.</a></li>
