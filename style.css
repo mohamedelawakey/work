@@ -888,7 +888,7 @@ img {
    Footer (Screenshot 6)
    ========================================================================== */
 .main-footer {
-  background-color: var(--primary-color);
+  background-color: #1b365d;
   color: white;
   padding: 4rem 0 2rem;
   margin-top: 2rem;
