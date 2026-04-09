@@ -16,7 +16,7 @@ const headerHTML = `
             <li><a href="investigations.html" id="nav-investigations">تحقيقات</a></li>
             <li><a href="reports.html" id="nav-reports">تقارير</a></li>
             <li><a href="news.html" id="nav-news">أخبار</a></li>
-            <li><a href="#" id="nav-interviews">حوارات</a></li>
+            <li><a href="interviews.html" id="nav-interviews">حوارات</a></li>
             <li><a href="#" id="nav-problems">أبرز المشكلات</a></li>
             <li><a href="#" id="nav-about">من نحن..؟</a></li>
           </ul>
