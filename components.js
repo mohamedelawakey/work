@@ -45,10 +45,9 @@ const headerHTML = `
 const footerHTML = `
     <footer class="main-footer">
       <div class="container footer-container">
-        <!-- Right Column: About -->
+        <!-- Right Column: About (RTL: Right) -->
         <div class="footer-col about-col">
           <div class="footer-logo">
-            <!-- Using the white logo for dark background -->
             <img src="assets/lOGO White.png" alt="كنوز الغربية" />
           </div>
           <p class="about-text">
@@ -59,7 +58,7 @@ const footerHTML = `
           </p>
         </div>
 
-        <!-- Middle Column: Quick Links -->
+        <!-- Middle Column: Quick Links (RTL: Middle) -->
         <div class="footer-col links-col">
           <h3>روابط سريعة</h3>
           <div class="footer-links-wrapper">
@@ -76,60 +75,22 @@ const footerHTML = `
           </div>
         </div>
 
-        <!-- Left Column: Contact -->
+        <!-- Left Column: Contact (RTL: Left) -->
         <div class="footer-col contact-col">
           <h3>تواصل معنا</h3>
           <div class="footer-socials">
-            <a href="#" class="f-social instagram"
-              ><img
-                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-                alt="Instagram"
-                style="width: 32px; height: 32px"
-            /></a>
-            <a
-              href="#"
-              class="f-social facebook"
-              style="
-                background: #1877f2;
-                color: white;
-                width: 32px;
-                height: 32px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                text-decoration: none;
-                font-size: 18px;
-              "
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a
-              href="#"
-              class="f-social twitter"
-              style="
-                background: #1da1f2;
-                color: white;
-                width: 32px;
-                height: 32px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                text-decoration: none;
-                font-size: 18px;
-              "
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
+            <a href="#" class="f-social twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="f-social facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="f-social instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
           <div class="contact-info">
             <p class="contact-email">
-              <i class="fa-regular fa-envelope"></i> info@datanews.com
+              <i class="fa-regular fa-envelope"></i>
+              <span>info@datanews.com</span>
             </p>
             <p class="location-text">
-              محافظة الغربية - طنطا.
-              <span class="pin-icon" style="color: #e21b1b"
-                ><i class="fa-solid fa-location-dot"></i
-              ></span>
+              <span>محافظة الغربية - طنطا.</span>
+              <span class="pin-icon"><i class="fa-solid fa-location-dot"></i></span>
             </p>
           </div>
         </div>
