@@ -70,6 +70,13 @@ img {
   display: block;
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 /* Container */
 .container {
   width: 100%;
@@ -367,15 +374,134 @@ img {
 
 /* Responsive adjust for Grid layout */
 @media (max-width: 992px) {
+  .header {
+    padding: 8px 0;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo-area {
+    flex: 1 1 auto;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 44px;
+  }
+
+  .datetime {
+    font-size: 0.68rem;
+    padding-right: 10px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav ul {
+    gap: 14px;
+    min-width: max-content;
+    padding: 2px 0 4px;
+  }
+
+  .main-nav a {
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
+
+  .main-nav a.active::after {
+    bottom: -6px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
   .footer-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .about-col,
   .links-col {
     border-left: none;
-    padding-left: 0;
+    padding: 0 0 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .header-container {
+    justify-content: center;
+  }
+
+  .logo-area {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .datetime {
+    font-size: 0.64rem;
+  }
+
+  .header-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-icon,
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+    gap: 8px 14px;
+  }
+
+  .main-nav a {
+    font-size: 0.92rem;
+  }
+
+  .main-footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-links-wrapper {
+    gap: 24px;
+  }
+
+  .footer-links-wrapper a,
+  .contact-email,
+  .location-text,
+  .contact-info p {
+    font-size: 0.98rem;
+  }
+
+  .main-heading {
+    font-size: 1.45rem;
   }
 }
 
@@ -451,4 +577,27 @@ img {
 .main-heading span {
   color: var(--secondary-color);
   margin: 0 10px;
+}
+
+@media (max-width: 576px) {
+  .footer-links-wrapper {
+    gap: 24px;
+  }
+
+  .footer-links-wrapper a,
+  .contact-email,
+  .location-text,
+  .contact-info p {
+    font-size: 0.98rem;
+  }
+
+  .footer-socials,
+  .contact-email,
+  .location-text {
+    justify-content: center;
+  }
+
+  .main-heading {
+    font-size: 1.45rem;
+  }
 }

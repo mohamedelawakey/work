@@ -165,6 +165,7 @@
 @media (max-width: 560px) {
   .investigations-page {
     padding-top: 14px;
+    padding-bottom: 24px;
   }
 
   .page-title {
@@ -178,6 +179,30 @@
   }
 
   .investigation-card {
-    aspect-ratio: 1.65 / 1;
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .investigation-overlay {
+    padding: 28px 12px 11px;
+  }
+
+  .investigation-overlay h2 {
+    font-size: 1.02rem;
+  }
+
+  .investigation-overlay p {
+    font-size: 0.78rem;
+  }
+
+  .investigation-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .investigation-card {
+    aspect-ratio: 1.25 / 1;
   }
 }

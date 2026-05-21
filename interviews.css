@@ -269,10 +269,66 @@
   }
 }
 @media (max-width: 768px) {
+  .interviews-page {
+    padding: 28px 0;
+  }
+
+  .page-title {
+    font-size: 1.55rem;
+    margin-bottom: 26px;
+  }
+
+  .interview-card {
+    padding: 14px;
+  }
+
+  .card-image {
+    height: 205px;
+  }
+
+  .card-content {
+    padding: 0;
+  }
+
+  .card-content h3 {
+    font-size: 1.18rem;
+  }
+
+  .card-content p,
+  .card-content .sub-description {
+    font-size: 0.96rem;
+  }
+
+  .card-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .card-image-placeholder {
     width: 80%;
   }
   .card-image-wrapper .plus-icon {
       right: 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .interviews-grid {
+    gap: 18px;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+
+  .badge.top-badge {
+    font-size: 0.78rem;
+    padding: 4px 14px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    margin-top: 32px;
   }
 }
