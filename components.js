@@ -69,7 +69,7 @@ const footerHTML = `
             <ul class="footer-links left-links">
               <li><a href="#">إنتاج واستثمار.</a></li>
               <li><a href="#">سوق العمل.</a></li>
-              <li><a href="#">دليل الأسعار</a></li>
+              <li><a href="interviews.html">حوارات</a></li>
             </ul>
           </div>
         </div>
