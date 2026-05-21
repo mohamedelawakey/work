@@ -57,6 +57,19 @@
   z-index: 2;
 }
 
+.card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.interview-card:hover .card-image {
+  transform: scale(1.02);
+}
+
 /* Card Placeholder styles */
 .card-image-placeholder {
   background-color: white;
@@ -147,7 +160,7 @@
 .card-image-wrapper .plus-icon {
   position: absolute;
   bottom: 0px;
-  right: 18%; /* Adjust based on placeholder width */
+  right: 15px; /* Aligned with full-width image */
   width: 35px;
   height: 35px;
   background-color: var(--secondary-color);

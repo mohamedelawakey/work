@@ -57,6 +57,19 @@
   z-index: 2;
 }
 
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover .card-image {
+  transform: scale(1.02);
+}
+
 /* Card Placeholder styles */
 .card-image-placeholder {
   background-color: white;

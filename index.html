@@ -41,40 +41,38 @@
           </div>
 
           <div class="slider-content">
-            <div class="slider-card">
-              <div class="card-header-placeholder">
-                <div class="avatar-placeholder"></div>
-                <div class="lines-placeholder">
-                  <div class="line long"></div>
-                </div>
-              </div>
-              <div class="image-placeholder">
-                <i class="fa-solid fa-mountain-sun"></i>
-              </div>
-              <div class="card-footer-placeholder">
-                <div class="line medium"></div>
-                <div class="line long"></div>
-              </div>
-              <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+            <!-- Slide 1 -->
+            <div class="slider-card active-slide" data-href="investigation_flax.html">
+              <img src="imgs/flax_main.jpg" alt="الكتان" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <!-- Slide 2 -->
+            <div class="slider-card" data-href="report_jasmine.html" style="display:none;">
+              <img src="imgs/jasmine_main.png" alt="الياسمين" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <!-- Slide 3 -->
+            <div class="slider-card" data-href="report_pottery.html" style="display:none;">
+              <img src="imgs/pottery_industry.png" alt="الفخار" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <!-- Slide 4 -->
+            <div class="slider-card" data-href="report_bags.html" style="display:none;">
+              <img src="imgs/bags_main.png" alt="الشنط" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <!-- Slide 5 -->
+            <div class="slider-card" data-href="interview_textile.html" style="display:none;">
+              <img src="imgs/textile_main.png" alt="الغزل" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+
+            <!-- Overlay text -->
+            <div class="slider-text" id="sliderText">
+              <span class="badge">تحقيق</span>
+              <h1>الكتان في شبراملس.. حرفه الأجداد بين المعاناه وغياب التطور</h1>
+              <p>في شبراملس بمحافظة الغربية، يُعد الكتان من أهم المحاصيل الزراعية التي يعتمد عليها الأهالي.</p>
             </div>
 
             <div class="slider-nav">
-              <button class="nav-btn prev">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-              <button class="nav-btn next">
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
+              <button class="nav-btn prev" id="sliderPrev"><i class="fa-solid fa-arrow-right"></i></button>
+              <button class="nav-btn next" id="sliderNext"><i class="fa-solid fa-arrow-left"></i></button>
             </div>
-          </div>
-
-          <div class="slider-text">
-            <span class="badge">تقارير</span>
-            <h1>هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز</h1>
-            <p>
-              هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان المذكور
-              أعلاه.
-            </p>
           </div>
         </div>
 
@@ -90,7 +88,7 @@
 
           <div class="info-block">
             <p class="title-bold">
-              مشروع تخرج شعبة صحافة دفعة مايو 2025 تحت رعاية
+              مشروع تخرج شعبة صحافة دفعة مايو 2026 تحت رعاية
             </p>
             <p>رئيس جامعة طنطا/ أ.د محمد حسين محمود</p>
           </div>
@@ -124,129 +122,72 @@
       </div>
     </section>
 
-    <!-- Important News Section -->
+        <!-- Important Topics Section -->
     <section class="important-news">
       <div class="container">
-        <h2 class="main-heading mb-4">
-          <span>•</span> وأهم الأخبار <span>•</span>
-        </h2>
+        <h2 class="main-heading mb-4"><span>•</span> وأهم المواضيع <span>•</span></h2>
 
-        <div class="news-grid-top">
+        <div class="important-news-grid">
           <!-- Large Card -->
-          <div class="news-card large-card">
-            <span class="badge red-badge">عاجل</span>
-            <div class="card-image-placeholder large-placeholder">
-              <div class="placeholder-icon">
-                <i class="fa-regular fa-image"></i>
-              </div>
-              <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-            </div>
-            <div class="card-content">
-              <div class="badges-row">
-                <span class="tag">تقارير</span>
-                <span class="tag">حوادث</span>
-              </div>
-              <h3>
-                هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-              </h3>
-              <p>
-                هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان المذكور
-                أعلاه.
-              </p>
+          <a href="report_pottery.html" class="news-card large-card">
+            <img src="imgs/pottery_industry.png" alt="الفخار" />
+            <div class="news-overlay">
+              <span class="tag">حر</span>
+              <h3>ارتفاع تكاليف الإنتاج يضع صناعة الفخار بالفرستق تحت الضغط</h3>
+              <p>أزمة الخامات وأسعار الطاقة تُهدد الورش التقليدية</p>
               <span class="date">يناير, 16, 2026</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Side Cards (Stack) -->
+          <!-- Side Cards (2 only) -->
           <div class="side-cards">
-            <div class="news-card small-card">
-              <div class="card-image-placeholder small-placeholder">
-                <i class="fa-regular fa-image"></i>
-              </div>
-              <div class="card-content">
-                <span class="tag">تقارير</span>
-                <h4>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h4>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه.
-                </p>
+            <a href="report_jasmine.html" class="news-card small-card">
+              <img src="imgs/jasmine_main.png" alt="الياسمين" />
+              <div class="news-overlay">
+                <span class="tag">تحقيق</span>
+                <h4>الياسمين في شبرا بلولة.. "ذهب أبيض" يُصدَّر للعالم</h4>
+                <p>بين طموحات التصدير ومعاناة عزب الحقول.</p>
                 <span class="date">يناير, 16, 2026</span>
               </div>
-            </div>
-
-            <div class="news-card small-card">
-              <div class="card-image-placeholder small-placeholder">
-                <i class="fa-regular fa-image"></i>
-              </div>
-              <div class="card-content">
-                <span class="tag">تقارير</span>
-                <h4>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h4>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه.
-                </p>
+            </a>
+            <a href="report_bags.html" class="news-card small-card">
+              <img src="imgs/bags_main.png" alt="الشنط" />
+              <div class="news-overlay">
+                <span class="tag">تقرير</span>
+                <h4>الحداد.. قرية لا تنام كيف تحوّلت بيوت الغربية إلى مصانع شنط؟</h4>
+                <p>كيف تحولت شنط الجلد من مصدر رزق إلى إرث بيصارع البقاء.</p>
                 <span class="date">يناير, 16, 2026</span>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="news-grid-bottom">
-          <!-- Bottom Cards -->
-          <div class="news-card bottom-card">
-            <div class="card-image-placeholder small-placeholder">
-              <i class="fa-regular fa-image"></i>
-            </div>
-            <div class="card-content text-center">
-              <span class="tag center-tag">تقارير</span>
-              <h4>
-                هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-              </h4>
-              <p>
-                هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان المذكور
-                أعلاه.
-              </p>
-              <span class="date">يناير, 16, 2026</span>
-            </div>
+            </a>
           </div>
 
-          <div class="news-card bottom-card">
-            <div class="card-image-placeholder small-placeholder">
-              <i class="fa-regular fa-image"></i>
-            </div>
-            <div class="card-content text-center">
-              <span class="tag center-tag">تقارير</span>
-              <h4>
-                هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-              </h4>
-              <p>
-                هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان المذكور
-                أعلاه.
-              </p>
+          <a href="interview_textile.html" class="news-card bottom-card">
+            <img src="imgs/textile_main.png" alt="الغزل" />
+            <div class="news-overlay">
+              <span class="tag">حوار</span>
+              <h4>الصناعات الوطنية بين عراقة الماضي وتحديات التطوير</h4>
+              <p>حوار حول مستقبل الغزل والنسيج بالمحلة الكبرى.</p>
               <span class="date">يناير, 16, 2026</span>
             </div>
-          </div>
-
-          <div class="news-card bottom-card">
-            <div class="card-image-placeholder small-placeholder">
-              <i class="fa-regular fa-image"></i>
-            </div>
-            <div class="card-content text-center">
-              <span class="tag center-tag">تقارير</span>
-              <h4>
-                هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-              </h4>
-              <p>
-                هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان المذكور
-                أعلاه.
-              </p>
+          </a>
+          <a href="interview_honey.html" class="news-card bottom-card">
+            <img src="imgs/honey_beekeeper.png" alt="العسل" />
+            <div class="news-overlay">
+              <span class="tag">تحقيق</span>
+              <h4>المخاطر التي تواجه إنتاج العسل.. بين المناحل ومصانع العسل</h4>
+              <p>مخاطر تهدد حياة النحل وانتاج العسل.</p>
               <span class="date">يناير, 16, 2026</span>
             </div>
-          </div>
+          </a>
+          <a href="report_palm.html" class="news-card bottom-card">
+            <img src="imgs/palm_peeling.png" alt="حرفة الجريد" />
+            <div class="news-overlay">
+              <span class="tag">تقرير</span>
+              <h4>على حافة الاختفاء.. كيف تطيح الأقفاص البلاستيكية بحرفة الجريد في شبرا النملة؟</h4>
+              <p>صراع البقاء.. تهديد البلاستيك لورش حرفة الجريد في شبرا النملة.</p>
+              <span class="date">يناير, 16, 2026</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -257,261 +198,133 @@
         <!-- Headers -->
         <div class="dual-headers">
           <div class="header-box">
-            <h2>سوق العمل</h2>
+            <h2>إنتاج واستثمار</h2>
           </div>
           <div class="header-box">
-            <h2>إنتاج واستثمار</h2>
+            <h2>سوق العمل</h2>
           </div>
         </div>
 
         <!-- Grid Content -->
         <div class="dual-grid">
-          <!-- Right Column (سوق العمل) -->
+          <!-- Right Column (إنتاج واستثمار) -->
           <div class="dual-column">
-            <!-- Card 1 -->
-            <div class="horizontal-card">
+            <a href="report_textile_factory.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/textile_factory.png" alt="غزل 4" style="width:100%;height:100%;object-fit:cover;" />
+              </div>
+              <div class="h-card-content">
+                <div class="h-badges">
+                  <span class="tag dark-tag">تحقيق</span>
+                  <span class="tag dark-tag">إنتاج</span>
+                </div>
+                <h3>طموح الرقمنة والمنافسة العالمية بمصنع "غزل 4" بالمحلة</h3>
+                <p>إعادة إحياء قلعة الغزل والنسيج بأكبر مصنع غزل عالمياً.</p>
+                <span class="date left-align">يناير, 16, 2026</span>
+              </div>
+            </a>
+            <a href="report_honey_factory.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/honey_factory.png" alt="مصنع تمساح" style="width:100%;height:100%;object-fit:cover;" />
+              </div>
               <div class="h-card-content">
                 <div class="h-badges">
                   <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">التوظيف</span>
+                  <span class="tag dark-tag">إنتاج</span>
                 </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
+                <h3>آليات الإنتاج الذكي ومواصفات الجودة بمصنع "تمساح" للعسل</h3>
+                <p>تطوير خطوط التعبئة الآلية والفحص المعملي لمواجهة الغش التجاري.</p>
                 <span class="date left-align">يناير, 16, 2026</span>
               </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
+            </a>
+            <a href="report_furniture_craft.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/furniture_workshop.png" alt="نجارة كتامة" style="width:100%;height:100%;object-fit:cover;" />
               </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="horizontal-card">
               <div class="h-card-content">
                 <div class="h-badges">
                   <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">التوظيف</span>
+                  <span class="tag dark-tag">إنتاج</span>
                 </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
+                <h3>فني تصنيع وتجميع نجارة بقرية كتامة الغابة</h3>
+                <p>تصنيع وتجميع الأثاث يدوياً وبالماكينات، وسط تحديات ركود السوق.</p>
                 <span class="date left-align">يناير, 16, 2026</span>
               </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
+            </a>
+            <a href="report_tires_recycling.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/tires_recycling.png" alt="تدوير الكاوتش" style="width:100%;height:100%;object-fit:cover;" />
               </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="horizontal-card">
               <div class="h-card-content">
                 <div class="h-badges">
                   <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">التوظيف</span>
+                  <span class="tag dark-tag">إنتاج</span>
                 </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
+                <h3>بدائل المستورد والقيمة الاقتصادية لتدوير الكاوتش</h3>
+                <p>تحويل الإطارات لسيور مطاطية وأرضيات ملاعب وسط مساعٍ رسمية.</p>
                 <span class="date left-align">يناير, 16, 2026</span>
               </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
-              </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="horizontal-card">
-              <div class="h-card-content">
-                <div class="h-badges">
-                  <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">التوظيف</span>
-                </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
-                <span class="date left-align">يناير, 16, 2026</span>
-              </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
-              </div>
-            </div>
+            </a>
           </div>
 
-          <!-- Left Column (إنتاج واستثمار) -->
+          <!-- Left Column (سوق العمل) -->
           <div class="dual-column">
-            <!-- Card 1 -->
-            <div class="horizontal-card">
+            <a href="report_pottery_craft.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/pottery_workshop.png" alt="صانع تشكيل الفخار" style="width:100%;height:100%;object-fit:cover;" />
+              </div>
+              <div class="h-card-content">
+                <div class="h-badges">
+                  <span class="tag dark-tag">أخبار</span>
+                  <span class="tag dark-tag">التوظيف</span>
+                </div>
+                <h3>صانع تشكيل الفخار اليدوي بقرية الفرستق</h3>
+                <p>تشكيل الطين لإنتاج "القلل" والفخار في دقائق، مع مواجهة تحديات ركود الإنتاج شتاءً.</p>
+                <span class="date left-align">يناير, 16, 2026</span>
+              </div>
+            </a>
+            <a href="report_tires.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/tires_workshop.png" alt="فني تقطيع إطارات" style="width:100%;height:100%;object-fit:cover;" />
+              </div>
+              <div class="h-card-content">
+                <div class="h-badges">
+                  <span class="tag dark-tag">تحقيق</span>
+                  <span class="tag dark-tag">التوظيف</span>
+                </div>
+                <h3>فني فصل وتقطيع إطارات يدوي بكفر ميت الحارون</h3>
+                <p>مهنة متوارثة منذ 50 عاماً تعتمد على تشريح الإطارات بالسكاكين الحادة.</p>
+                <span class="date left-align">يناير, 16, 2026</span>
+              </div>
+            </a>
+            <a href="report_tires_recycling.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/tires_recycling.png" alt="تدوير الكاوتش" style="width:100%;height:100%;object-fit:cover;" />
+              </div>
               <div class="h-card-content">
                 <div class="h-badges">
                   <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">إنتاج</span>
+                  <span class="tag dark-tag">التوظيف</span>
                 </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
+                <h3>بدائل المستورد والقيمة الاقتصادية لتدوير الكاوتش</h3>
+                <p>تحويل الإطارات لسيور مطاطية وأرضيات ملاعب.</p>
                 <span class="date left-align">يناير, 16, 2026</span>
               </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
+            </a>
+            <a href="report_pottery_production.html" class="horizontal-card" style="text-decoration:none;color:inherit;">
+              <div class="h-card-image" style="overflow:hidden;border-radius:8px;flex-shrink:0;width:130px;height:130px;">
+                <img src="imgs/pottery_production.png" alt="مراحل إنتاج الفخار" style="width:100%;height:100%;object-fit:cover;" />
               </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="horizontal-card">
               <div class="h-card-content">
                 <div class="h-badges">
-                  <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">إنتاج</span>
+                  <span class="tag dark-tag">تحقيق</span>
+                  <span class="tag dark-tag">التوظيف</span>
                 </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
+                <h3>مراحل الإنتاج ودورة تجهيز مصانع الفخار بقرية الفرستق</h3>
+                <p>استمرار ورش الفخار في تنظيم مراحل العجن والتجهيز الآلي.</p>
                 <span class="date left-align">يناير, 16, 2026</span>
               </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
-              </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="horizontal-card">
-              <div class="h-card-content">
-                <div class="h-badges">
-                  <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">إنتاج</span>
-                </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
-                <span class="date left-align">يناير, 16, 2026</span>
-              </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
-              </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="horizontal-card">
-              <div class="h-card-content">
-                <div class="h-badges">
-                  <span class="tag dark-tag">تقارير</span>
-                  <span class="tag dark-tag">إنتاج</span>
-                </div>
-                <h3>
-                  هنا يوضح العنوان الرئيسي للخبر أو التقرير الصحفي بشكل بارز
-                </h3>
-                <p>
-                  هنا يتم كتابة وصف مختصر أو تفاصيل إضافية تتعلق بالعنوان
-                  المذكور أعلاه،
-                </p>
-                <span class="date left-align">يناير, 16, 2026</span>
-              </div>
-              <div class="h-card-image">
-                <div class="wireframe-box">
-                  <div class="wf-top">
-                    <span class="wf-dot"></span>
-                    <span class="wf-line"></span>
-                  </div>
-                  <div class="wf-icon">
-                    <i class="fa-solid fa-mountain"></i>
-                  </div>
-                  <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <span class="rotated-text">هنا يوجد صورة</span>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -525,142 +338,66 @@
         </h2>
 
         <div class="three-col-grid">
-          <!-- Card 1 -->
-          <div class="report-card">
-            <div class="rc-image">
-              <div class="wireframe-box large">
-                <div class="wf-top">
-                  <span class="wf-dot"></span>
-                  <span class="wf-line"></span>
-                </div>
-                <div class="wf-icon"><i class="fa-solid fa-mountain"></i></div>
-              </div>
+          <a href="interview_honey.html" class="report-card">
+            <img src="imgs/5bf480fab2c02b890141ca450ee42c7a0d99701f.png" alt="العسل الطبيعي بين الجودة والإنتاج" />
+            <div class="report-card-content">
+              <h3>العسل الطبيعي بين الجودة والإنتاج</h3>
+              <p>حوار صحفي مع صاحب شركة لإنتاج العسل.</p>
+              <span class="date">يناير, 16, 2026</span>
             </div>
-            <div class="rc-content">
-              <h3>هنا يوضح العنوان الرئيسي للخبر بشكل بارز</h3>
-              <p>هنا يتم كتابة وصف مختصر أو تفاصيل تتعلق بالعنوان المذكور</p>
-              <span class="date left-align">يناير, 16, 2026</span>
+          </a>
+          <a href="report_textile_factory.html" class="report-card">
+            <img src="imgs/d3e5c007d085ad2506e638c64975d025758c3bf4.png" alt="قلعة الصناعة تستعيد بريقها" />
+            <div class="report-card-content">
+              <h3>قلعة الصناعة "تستعيد بريقها".. "غزل المحلة" من حلم "طلعت حرب" إلى أكبر مصنع في العالم</h3>
+              <p>تحدي "غزل المحلة": من إرث "طلعت حرب" إلى ريادة عالمية.</p>
+              <span class="date">يناير, 16, 2026</span>
             </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="report-card">
-            <div class="rc-image">
-              <div class="wireframe-box large">
-                <div class="wf-top">
-                  <span class="wf-dot"></span>
-                  <span class="wf-line"></span>
-                </div>
-                <div class="wf-icon"><i class="fa-solid fa-mountain"></i></div>
-              </div>
+          </a>
+          <a href="report_jasmine.html" class="report-card">
+            <img src="imgs/c6e97fe020ff5d079337a5119155404c0f7f77e1.png" alt="الياسمين في شبرا بلولة" />
+            <div class="report-card-content">
+              <h3>الياسمين في شبرا بلولة.. رحلة الذهب الأبيض من الحقول إلى عطور العالم</h3>
+              <p>رحلة الذهب الأبيض: من حقول شبرا بلولة إلى العالمية.</p>
+              <span class="date">يناير, 16, 2026</span>
             </div>
-            <div class="rc-content">
-              <h3>هنا يوضح العنوان الرئيسي للخبر بشكل بارز</h3>
-              <p>هنا يتم كتابة وصف مختصر أو تفاصيل تتعلق بالعنوان المذكور</p>
-              <span class="date left-align">يناير, 16, 2026</span>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="report-card">
-            <div class="rc-image">
-              <div class="wireframe-box large">
-                <div class="wf-top">
-                  <span class="wf-dot"></span>
-                  <span class="wf-line"></span>
-                </div>
-                <div class="wf-icon"><i class="fa-solid fa-mountain"></i></div>
-              </div>
-            </div>
-            <div class="rc-content">
-              <h3>هنا يوضح العنوان الرئيسي للخبر بشكل بارز</h3>
-              <p>هنا يتم كتابة وصف مختصر أو تفاصيل تتعلق بالعنوان المذكور</p>
-              <span class="date left-align">يناير, 16, 2026</span>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Market Guide Section (دليلك لأسعار السوق) -->
-    <section class="market-section">
+    <!-- Investigations Section (التحقيقات) -->
+    <section class="investigations-section">
       <div class="container">
         <h2 class="main-heading mb-4">
-          <span>•</span> دليلك لأسعار السوق <span>•</span>
+          <span>•</span> التحقيقات <span>•</span>
         </h2>
 
         <div class="three-col-grid">
-          <!-- Card 1 -->
-          <div class="report-card">
-            <div class="rc-image">
-              <div class="wireframe-box large">
-                <div class="wf-top">
-                  <span class="wf-dot"></span>
-                  <span class="wf-line"></span>
-                </div>
-                <div class="wf-icon"><i class="fa-solid fa-mountain"></i></div>
-              </div>
+          <a href="report_bags.html" class="report-card">
+            <img src="imgs/ebec6144f10fbbc5f9069316138c1f6b62c9c035.png" alt="صناعة الجلود في الحداد" />
+            <div class="report-card-content">
+              <h3>صناعة الجلود في "الحداد".. إرث حرفي يصارع البقاء</h3>
+              <p>تحديات الإنتاج والمنافسة.. كيف تواجه ورش "الحداد" شبح الاندثار؟</p>
+              <span class="date">يناير, 16, 2026</span>
             </div>
-            <div class="rc-content">
-              <h3>هنا يوضح العنوان الرئيسي "اسم الخامة"</h3>
-              <p class="strong-text">هنا يتم كتابة السعر الحالي للخامة</p>
-              <p>هنا يتم كتابة وحدة القياس بالنسبة للسعر</p>
-              <div class="rc-footer">
-                <span class="green-text"
-                  >هنا يتم كتابة مؤشر التغير في السعر</span
-                >
-                <span class="date left-align">يناير, 16, 2026</span>
-              </div>
+          </a>
+          <a href="investigation_furniture.html" class="report-card">
+            <img src="imgs/flax_industry.png" alt="النشارة داخل الورش" />
+            <div class="report-card-content">
+              <h3>وراء الورش.. رحلة "النشارة" من مخلفات إلى مصدر رزق في كفر العنانية</h3>
+              <p>مصنع إعادة تدوير النشارة في كفر كنانة.</p>
+              <span class="date">يناير, 16, 2026</span>
             </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="report-card">
-            <div class="rc-image">
-              <div class="wireframe-box large">
-                <div class="wf-top">
-                  <span class="wf-dot"></span>
-                  <span class="wf-line"></span>
-                </div>
-                <div class="wf-icon"><i class="fa-solid fa-mountain"></i></div>
-              </div>
+          </a>
+          <a href="report_palm.html" class="report-card">
+            <img src="imgs/palm_peeling.png" alt="حرفة الجريد في شبرا النملة" />
+            <div class="report-card-content">
+              <h3>على حافة الاختفاء.. كيف تطيح الأقفاص البلاستيكية بحرفة الجريد في شبرا النملة؟</h3>
+              <p>صراع البقاء.. تهديد البلاستيك لورش حرفة الجريد في شبرا النملة.</p>
+              <span class="date">يناير, 16, 2026</span>
             </div>
-            <div class="rc-content">
-              <h3>هنا يوضح العنوان الرئيسي "اسم الخامة"</h3>
-              <p class="strong-text">هنا يتم كتابة السعر الحالي للخامة</p>
-              <p>هنا يتم كتابة وحدة القياس بالنسبة للسعر</p>
-              <div class="rc-footer">
-                <span class="green-text"
-                  >هنا يتم كتابة مؤشر التغير في السعر</span
-                >
-                <span class="date left-align">يناير, 16, 2026</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="report-card">
-            <div class="rc-image">
-              <div class="wireframe-box large">
-                <div class="wf-top">
-                  <span class="wf-dot"></span>
-                  <span class="wf-line"></span>
-                </div>
-                <div class="wf-icon"><i class="fa-solid fa-mountain"></i></div>
-              </div>
-            </div>
-            <div class="rc-content">
-              <h3>هنا يوضح العنوان الرئيسي "اسم الخامة"</h3>
-              <p class="strong-text">هنا يتم كتابة السعر الحالي للخامة</p>
-              <p>هنا يتم كتابة وحدة القياس بالنسبة للسعر</p>
-              <div class="rc-footer">
-                <span class="green-text"
-                  >هنا يتم كتابة مؤشر التغير في السعر</span
-                >
-                <span class="date left-align">يناير, 16, 2026</span>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -673,6 +410,36 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         renderComponents("nav-home");
+
+        // Slider logic
+        const slides = document.querySelectorAll('.slider-card');
+        const dots = document.querySelectorAll('.dot');
+        const sliderData = [
+          { badge: 'تحقيق', title: 'الكتان في شبراملس.. حرفه الأجداد بين المعاناه وغياب التطور', desc: 'في شبراملس بمحافظة الغربية، يُعد الكتان من أهم المحاصيل الزراعية التي يعتمد عليها الأهالي.', href: 'investigation_flax.html' },
+          { badge: 'تقرير', title: 'الياسمين في شبرا بلولة.. ذهب أبيض يُصدَّر للعالم', desc: 'قصة كفاح يومي تعيشها آلاف من الأهالي، بين أمل في تحسين الدخل وواقع اقتصادي صعب.', href: 'report_jasmine.html' },
+          { badge: 'تقرير', title: 'ارتفاع تكاليف الإنتاج يضع صناعة الفخار بالفرستق تحت الضغط', desc: 'ضغوط متزايدة نتيجة ارتفاع أسعار الخامات وتكاليف الإنتاج وغياب الدعم الرسمي.', href: 'report_pottery.html' },
+          { badge: 'تقرير', title: 'الحداد.. قرية لا تنام كيف تحوّلت بيوت الغربية إلى مصانع شنط؟', desc: 'أصوات ماكينات الخياطة لا تتوقف، والجلود والإكسسوارات تملأ الأزقة.', href: 'report_bags.html' },
+          { badge: 'حوار', title: 'الغزل والنسيج بالمحلة الكبرى.. بين عراقة الماضي وتحديات التطوير', desc: 'مدينة المحلة تعد عصب صناعة الغزل والنسيج في مصر ولديها تاريخ طويل.', href: 'interview_textile.html' },
+        ];
+        let cur = 0;
+        const textEl = document.getElementById('sliderText');
+
+        textEl.addEventListener('click', () => location.href = sliderData[cur].href);
+
+        function goTo(n) {
+          slides[cur].style.display = 'none';
+          dots[cur].classList.remove('active');
+          cur = (n + slides.length) % slides.length;
+          slides[cur].style.display = 'block';
+          dots[cur].classList.add('active');
+          const d = sliderData[cur];
+          textEl.innerHTML = `<span class="badge">${d.badge}</span><h1>${d.title}</h1><p>${d.desc}</p>`;
+        }
+
+        document.getElementById('sliderNext').addEventListener('click', (e) => { e.stopPropagation(); goTo(cur + 1); });
+        document.getElementById('sliderPrev').addEventListener('click', (e) => { e.stopPropagation(); goTo(cur - 1); });
+        dots.forEach((dot, i) => dot.addEventListener('click', (e) => { e.stopPropagation(); goTo(i); }));
+        setInterval(() => goTo(cur + 1), 5000);
       });
     </script>
   </body>
