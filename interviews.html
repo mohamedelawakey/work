@@ -21,6 +21,65 @@
 
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="investigations.css" />
+    <style>
+      .pagination {
+        margin-top: 35px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+      .pagination .page-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #f1f5f9;
+        color: var(--secondary-color);
+        font-weight: 700;
+        transition: all 0.25s ease;
+        text-decoration: none;
+      }
+      .pagination .page-num:hover {
+        background-color: #dde7ef;
+        transform: translateY(-2px);
+      }
+      .pagination .page-num.active {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+        box-shadow: 0 4px 10px rgba(20, 32, 44, 0.15);
+      }
+      .pagination .page-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #f1f5f9;
+        color: var(--secondary-color);
+        transition: all 0.25s ease;
+        text-decoration: none;
+      }
+      .pagination .page-btn:hover {
+        background-color: #dde7ef;
+        transform: translateY(-2px);
+      }
+      .pagination .page-btn.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Placeholder -->
@@ -32,58 +91,12 @@
           <span>•</span> الحوارات <span>•</span>
         </h1>
 
-        <div class="investigations-grid">
-          <!-- Card 1 (Top Right in RTL) -->
-          <a href="interview_jasmine_worker.html" class="investigation-card">
-            <img src="imgs/3a37e863f33edd8c02e86d7d4d9056c77683ac08.png" alt="كواليس عطر العالم" />
-            <div class="investigation-overlay">
-              <h2>بنبدأ من 3 الفجر... عاملة ياسمين في شبرا بلولة تكشف كواليس عطر العالم الأولى</h2>
-              <p>وسط حقول الياسمين التي تفوح رائحتها في ساعات الفجر الأولى</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> محمود مجدي رفاعي الشرايحي</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
+        <div class="investigations-grid" id="interviews-grid">
+          <!-- Dynamically filled by JavaScript -->
+        </div>
 
-          <!-- Card 2 (Top Left in RTL) -->
-          <a href="interview_pottery_alferesteq.html" class="investigation-card">
-            <img src="imgs/bc9315d0c422a0c43e1a1d0481d43fa18f48c30c.png" alt="الفخار بين الازدهار والاندثار" />
-            <div class="investigation-overlay">
-              <h2>الفخار بين الازدهار والاندثار.. أحمد مصطفى يروي حكاية المهنة من قلب الفرستق</h2>
-              <p>داخل إحدى ورش الفخار بقرية الفرستق، حيث تتحول البودرة إلى قطع فنية</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> أسماء عصام محمد عبد الفتاح</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 3 (Bottom Right in RTL) -->
-          <a href="interview_kafr_elzayat_development.html" class="investigation-card">
-            <img src="imgs/fa68d739a7f4174db1755edcfa73806b2d7d1c8c.png" alt="فرص العمل والتنمية الصناعية" />
-            <div class="investigation-overlay">
-              <h2>فرص العمل والتنمية الصناعية في كفر الزيات".. حوار مع الأستاذ الدكتور عادل عبد المنعم المسدي</h2>
-              <p>تمثل الصناعات الكبرى أحد العناصر المؤثرة في النشاط الاقتصادي المحلي، خاصة الصناعات المرتبطة بالإنتاج الزراعي</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> حسن أحمد رفعت بلحه</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 4 (Bottom Left in RTL) -->
-          <a href="interview_vegetable_merchant.html" class="investigation-card">
-            <img src="imgs/6d057ded605c140c6975a7c8a2d67083014a1d8e.png" alt="تاجر خضار بسوق المحلة" />
-            <div class="investigation-overlay">
-              <h2>"من الخشب إلى البلاستيك".. تاجر خضار بسوق المحلة يكشف أسباب اختفاء الأقفاص التقليدية</h2>
-              <p>حركة سوق الجملة في المحلة الكبرى تتغير ملامح تجارة الخضروات تدريجياً،</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> حسين أحمد رفعت بلحه</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
+        <div class="pagination" id="interviews-pagination">
+          <!-- Dynamically filled by JavaScript -->
         </div>
       </div>
     </main>
@@ -93,8 +106,216 @@
 
     <script src="components.js"></script>
     <script>
+      const interviews = [
+        {
+          title: "احمد الصفتاوى أحد مشرفين شركة العسل و نتحدث عن مخاطر المؤثرة على انتاج العسل",
+          link: "interview_honey.html",
+          img: "imgs/image.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في قلب ريف محافظة الغربية، وتحديدًا في قرية شبشير الحصة التابعة لمركز طنطا، تنبض حكاية مختلفة عنوانها العمل والإنتاج."
+        },
+        {
+          title: "ﺍﻟﻴﺎﺳﻤﻴﻦ ﻓﻲ ﺷﺒﺮﺍ ﺑﻠﻮﻟﺔ… \"ﺫﻫﺐ ﺃﺑﻴﺾ\" ﻳﺼُﺪﺭَّ ﻟﻠﻌﺎﻟﻢ ﻭﻋﺮﻕ ﻻ ﻳﻨُﺼﻒ ﻓﻲ ﺍﻟﺤﻘﻮﻝ .",
+          link: "report_jasmine.html",
+          img: "imgs/b0925c6e2688fbc6aec21b7bff5aa060e94e0842(1).png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "ﻓﻲ ﺍﻟﻮﻗﺖ ﺍﻟﺬﻱ ﺗﻨﺎﻡ ﻓﻴﻪ ﻣﻌﻈﻢ ﺍﻟﻘﺮﻯ ﺍﻟﻤﺼﺮﻳﺔ، ﺗﺴﺘﻴﻘﻆ “ﻗﺮﻳﺔ ﺷﺒﺮﺍ ﺑﻠﻮﻟﺔ مركز قطور محافظة الغربية” ﻗﺒﻞ ﺍﻟﻔﺠﺮ ﺑﺴﺎﻋﺎﺕ، ﻟﺘﺒﺪﺃ ﻭﺍﺣﺪﺓ ﻣﻦ ﺃﻛﺜﺮ ﺍﻟﻤﻬﻦ ﺩﻗﺔً ﻭﻣﺸﻘﺔً."
+        },
+        {
+          title: "قرية الأثاث في الغربية.. حوار مع نجّار يكشف أسرار صناعة تتوارثها الأجيال",
+          link: "interview_furniture_village.html",
+          img: "imgs/78c1dbbce508c5118f63cfba92dd45f7b072e6b4.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في ريف محافظة الغربية، وتحديدًا داخل قرية معروفة بصناعة الأثاث، تبرز قصة مختلفة عن كثير من القرى المصرية، عنوانها العمل والإنتاج."
+        },
+        {
+          title: "الصناعات الوطنية بين عراقة الماضي وتحديات التطوير: حوار حول مستقبل الغزل والنسيج بالمحلة الكبرى",
+          link: "interview_mahalla_textile.html",
+          img: "imgs/126f668dfdb5d612955e59fdcd54b02bffb4f0da.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في إطار مناقشة أوضاع قطاع الصناعة وتأثيره على سوق العمل في القلعة الصناعية لمصر، أجرينا هذا الحوار مع المهندس صلاح عوف."
+        },
+        {
+          title: "الكتان في شبراملس ..حكايه رزق مهدده بين الحرائق وغياب التصنيع",
+          link: "interview_flax.html",
+          img: "imgs/flax_industry.png",
+          author: "إيمان منجي عبد الغفار علي الشيخ",
+          date: "30 مارس 2026",
+          desc: "في قرية شبراملس التابعة لمحافظة الغربية، لا يُعد الكتان مجرد محصول زراعي، بل هو حكاية ممتدة عبر أجيال، ومصدر رزق أساسي لآلاف الأسر."
+        },
+        {
+          title: "أحمد الصفتاوي لـ(كنوز الغربية ): شبشير الحصة تنتج 70% من عسل مصر.. والمناخ أكبر تحدياتنا.",
+          link: "interview_honey_sabshir.html",
+          img: "imgs/c46cd8d77a957fad05f31f32c6d7fc56de10a404.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في نفس القرية التى تشتهر بإنتاج العسل التقينا بـ\"أحمد الصفتاوى\"، احد المشرفين في مصنع العسل، لنتعرف منه كافة المعلومات عن هذه المهنه."
+        },
+        {
+          title: "بنبدأ من 3 الفجر… عاملة ياسمين في شبرا بلولة تكشف كواليس عطر العالم",
+          link: "interview_jasmine_worker.html",
+          img: "imgs/3a37e863f33edd8c02e86d7d4d9056c77683ac08.png",
+          author: "محمود مجدي رفاعي الشرايحي",
+          date: "16 يناير 2026",
+          desc: "وسط حقول الياسمين التي تفوح رائحتها في ساعات الفجر الأولى، التقت الصحافة بـ\"أم محمد\"، إحدى العاملات في جمع زهور الياسمين بقرية شبرا بلولة."
+        },
+        {
+          title: "الفخار بين الازدهار والاندثار.. أحمد مصطفى يروي حكاية المهنة من قلب الفرستق",
+          link: "interview_pottery_alferesteq.html",
+          img: "imgs/bc9315d0c422a0c43e1a1d0481d43fa18f48c30c.png",
+          author: "أسماء عصام محمد عبد الفتاح",
+          date: "16 يناير 2026",
+          desc: "داخل إحدى ورش الفخار بقرية الفرستق، حيث تتحول البودرة إلى قطع فنيه بين أيدي الحرفيين، التقينا بـ\"أحمد مصطفى\"."
+        },
+        {
+          title: "البطالة في كفر ميت الحارون بين فرص الصناعات المحلية وتحديات سوق",
+          link: "interview_unemployment.html",
+          img: "imgs/93dfe8e106705ecd8b95b8f7aab54adf2e4a09b8.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في إطار مناقشة أوضاع سوق العمل في القرى الصناعية، أجرينا هذا الحوار مع الدكتور إكرامي عصمت عبد الهادي."
+        },
+        {
+          title: "قلاع كفر الزيات الصناعية: قراءة في مستقبل صناعة الزيوت والصابون والتحديات الاقتصادية الراهنة",
+          link: "interview_oils_factory.html",
+          img: "imgs/9f4cf70d63fd51fadc2b8d40be11d757fca4d7bf.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في إطار المتابعة المستمرة لواقع القطاعات الإنتاجية الكبرى في الدلتا، أجرينا هذا الحوار مع الخبير التقني بأحد المصانع أ/\"عادل منصور\"."
+        },
+        {
+          title: "من الخشب إلى البلاستيك.. تاجر خضار بسوق المحلة يكشف أسباب اختفاء الأقفاص التقليدية",
+          link: "interview_vegetable_merchant.html",
+          img: "imgs/palm_expert.png",
+          author: "حسين أحمد رفعت بلحه",
+          date: "16 يناير 2026",
+          desc: "داخل سوق الجملة في المحلة الكبرى، تتغير ملامح تجارة الخضروات تدريجيًا، ليس فقط في الأسعار أو الكميات، ولكن في أدوات النقل والتخزين نفسها."
+        },
+        {
+          title: "فرص العمل والتنمية الصناعية في كفر الزيات\".. حوار مع الأستاذ الدكتور عادل عبد المنعم المسدي",
+          link: "interview_kafr_elzayat_development.html",
+          img: "imgs/fa68d739a7f4174db1755edcfa73806b2d7d1c8c.png",
+          author: "حسن أحمد رفعت بلحه",
+          date: "16 يناير 2026",
+          desc: "تمثل الصناعات الكبرى أحد العناصر المؤثرة في النشاط الاقتصادي المحلي، خاصة الصناعات المرتبطة بالإنتاج الزراعي مثل صناعة الأسمدة."
+        }
+      ];
+
+      const CARDS_PER_PAGE = 4;
+      let currentPage = 1;
+
+      function getPageFromHash() {
+        const hash = window.location.hash;
+        const match = hash.match(/#page-(\d+)/);
+        return match ? parseInt(match[1], 10) : 1;
+      }
+
+      function renderInterviews(page) {
+        const container = document.getElementById("interviews-grid");
+        if (!container) return;
+
+        container.innerHTML = "";
+        
+        const startIndex = (page - 1) * CARDS_PER_PAGE;
+        const endIndex = Math.min(startIndex + CARDS_PER_PAGE, interviews.length);
+        const pageInterviews = interviews.slice(startIndex, endIndex);
+
+        pageInterviews.forEach(item => {
+          const cardHtml = `
+            <a href="${item.link}" class="investigation-card">
+              <img src="${item.img}" alt="${item.title}" />
+              <div class="investigation-overlay">
+                <h2>${item.title}</h2>
+                <p>${item.desc}</p>
+                <div class="investigation-meta">
+                  <span class="author"><i class="fa-solid fa-user"></i> ${item.author}</span>
+                  <time datetime="${item.date}">${item.date}</time>
+                </div>
+              </div>
+            </a>
+          `;
+          container.insertAdjacentHTML("beforeend", cardHtml);
+        });
+      }
+
+      function renderPagination(page) {
+        const container = document.getElementById("interviews-pagination");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        const totalPages = Math.ceil(interviews.length / CARDS_PER_PAGE);
+        if (totalPages <= 1) return;
+
+        // Previous button (Right arrow in RTL)
+        const prevBtn = document.createElement("button");
+        prevBtn.className = `page-btn ${page === 1 ? 'disabled' : ''}`;
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        prevBtn.addEventListener("click", () => {
+          if (page > 1) {
+            goToPage(page - 1);
+          }
+        });
+        container.appendChild(prevBtn);
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+          const pageNum = document.createElement("button");
+          pageNum.className = `page-num ${i === page ? 'active' : ''}`;
+          pageNum.innerText = i;
+          pageNum.addEventListener("click", () => {
+            goToPage(i);
+          });
+          container.appendChild(pageNum);
+        }
+
+        // Next button (Left arrow in RTL)
+        const nextBtn = document.createElement("button");
+        nextBtn.className = `page-btn ${page === totalPages ? 'disabled' : ''}`;
+        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        nextBtn.addEventListener("click", () => {
+          if (page < totalPages) {
+            goToPage(page + 1);
+          }
+        });
+        container.appendChild(nextBtn);
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        window.location.hash = `page-${page}`;
+        renderInterviews(page);
+        renderPagination(page);
+        
+        // Scroll to top of grid/page
+        window.scrollTo({
+          top: document.querySelector(".investigations-page").offsetTop - 40,
+          behavior: "smooth"
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         renderComponents("nav-interviews");
+        
+        const initialPage = getPageFromHash();
+        const totalPages = Math.ceil(interviews.length / CARDS_PER_PAGE);
+        currentPage = initialPage >= 1 && initialPage <= totalPages ? initialPage : 1;
+        
+        renderInterviews(currentPage);
+        renderPagination(currentPage);
+
+        window.addEventListener("hashchange", () => {
+          const page = getPageFromHash();
+          if (page !== currentPage && page >= 1 && page <= totalPages) {
+            currentPage = page;
+            renderInterviews(page);
+            renderPagination(page);
+          }
+        });
       });
     </script>
   </body>

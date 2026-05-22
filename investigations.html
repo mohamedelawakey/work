@@ -32,58 +32,12 @@
           <span>•</span> التحقيقات <span>•</span>
         </h1>
 
-        <div class="investigations-grid">
-          <!-- Card 1 -->
-          <a href="report_bags.html" class="investigation-card">
-            <img src="imgs/leather_main.png" alt="صناعة الجلود في الحداد" />
-            <div class="investigation-overlay">
-              <h2>صناعة الجلود في "الحداد".. إرث حرفي يصارع البقاء</h2>
-              <p>تحديات الإنتاج والمنافسة: كيف تواجه ورش "الحداد" شبح الاندثار؟</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> سما أسامة جادو</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
+        <div class="investigations-grid" id="investigations-grid">
+          <!-- Dynamically filled by JavaScript -->
+        </div>
 
-          <!-- Card 2 -->
-          <a href="report_furniture_craft.html" class="investigation-card">
-            <img src="imgs/sawdust_main.png" alt="رحلة النشارة في كتامة الغابة" />
-            <div class="investigation-overlay">
-              <h2>وراء الورش.. رحلة "النشارة" من مخلفات إلى مصدر رزق في كتامة الغابة</h2>
-              <p>من مخلفات الورش إلى قيمة مضافة: كيف تحول "كتامة" نشارة الخشب إلى مصدر دخل؟</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> إيمان صلاح عبد المولى على السرج</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 3 -->
-          <a href="report_soap_factory.html" class="investigation-card">
-            <img src="imgs/soap_main.png" alt="مصنع صابون كفر الزيات" />
-            <div class="investigation-overlay">
-              <h2>خلف رغوة الصابون.. حكاية عمال يقاومون الزمن في مصنع كفر الزيات</h2>
-              <p>صمود وإصرار: رحلة عمال "كفر الزيات" في مواجهة تحديات الزمن داخل مصنع الصابون.</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> فاطمة محمود</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 4 -->
-          <a href="investigation_flax_heritage.html" class="investigation-card">
-            <img src="imgs/flax_harvest.png" alt="الكتان في شبراملس" />
-            <div class="investigation-overlay">
-              <h2>الكتان في شبراملس.. حرفه الأجداد بين المعاناه وغياب التطوير</h2>
-              <p>شبراملس في الغربية تُعد الكتان أهم المحاصيل الزراعية التي يعتمد عليها الأهالي</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> نورهان محمد</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
+        <div class="pagination" id="investigations-pagination">
+          <!-- Dynamically filled by JavaScript -->
         </div>
       </div>
     </main>
@@ -93,8 +47,216 @@
 
     <script src="components.js"></script>
     <script>
+      const CARDS_PER_PAGE = 4;
+      let currentPage = 1;
+
+      const investigations = [
+        {
+          title: "وراء الورش.. رحلة \"النشاره\"من مخلفات إلى مصدر رزق في كتامة الغابة",
+          desc: "من مخلفات الورش إلى قيمة مضافة: كيف تحول \"كتامة\" نشارة الخشب إلى مصدر دخل؟",
+          link: "report_furniture_craft.html",
+          img: "imgs/sawdust_main.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "الكتان في شبراملس .. حرفه الأجداد بين المعاناه وغياب التطور",
+          desc: "بشبراملس في الغربية، يُعد الكتان أهم المحاصيل الزراعية التي يعتمد عليها الأهالي.",
+          link: "investigation_flax_heritage.html",
+          img: "imgs/flax_harvest.png",
+          author: "نورهان محمد",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "صناعة الجلود في \"الحداد\".. إرث حرفي يصارع البقاء",
+          desc: "تحديات الإنتاج والمنافسة: كيف تواجه ورش \"الحداد\" شبح الاندثار؟",
+          link: "report_bags.html",
+          img: "imgs/leather_main.png",
+          author: "سما أسامة جادو",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "خلف رغوة الصابون.. حكاية عمال يقاومون الزمن في مصنع كفر الزيات",
+          desc: "صمود وإصرار: رحلة عمال \"كفر الزيات\" في مواجهة تحديات الزمن داخل مصنع الصابون.",
+          link: "report_soap_factory.html",
+          img: "imgs/soap_main.png",
+          author: "فاطمة محمود",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "\"رحيق الكفاح\".. أسرار وتحديات صناعة العسل في الريف المصري",
+          desc: "من الخلايا إلى المائدة: كيف يواجه مربّو النحل الصعاب لإنتاج ذهب الطبيعة؟",
+          link: "report_honey.html",
+          img: "imgs/honey_main.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "بين فرص العمل ومخاوف التأثيرات.. لماذا تثير مصانع الأسمدة في كفر الزيات تساؤلات حول تحقيق التوازن",
+          desc: "لبحث عن التوازن: كيف توازن المدينة بين دورها الصناعي وتحديات الأمان البيئي؟",
+          link: "report_factory.html",
+          img: "imgs/fertilizer_main.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "على حافة الاختفاء.. كيف تطيح الأقفاص البلاستيكية بحرفة الجريد في شبرا النملة؟",
+          desc: "صراع البقاء: تهديد البلاستيك لمستقبل حرفة الجريد العريقة.",
+          link: "report_palm.html",
+          img: "imgs/palm_peeling.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "من السحابة السوداء إلى الوقود البديل.. كفر ميت الحارون تعيد تدوير الإطارات بين إنقاذ البيئة ومخاطر المهنة",
+          desc: "من التلوث إلى الاستدامة: كيف تحوّل \"كفر ميت الحارون\" أزمة الإطارات إلى فرصة اقتصادية؟",
+          link: "report_tires.html",
+          img: "imgs/43948d12749d1b419834e70614de65a1d6c06ecc(1).png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "ﺍﻟﻴﺎﺳﻤﻴﻦ ﻓﻲ ﺷﺒﺮﺍ ﺑﻠﻮﻟﺔ… \"ﺫﻫﺐ ﺃﺑﻴﺾ\" ﻳﺼُﺪﺭَّ ﻟﻠﻌﺎﻟﻢ ﻭﻋﺮﻕ ﻻ ﻳﻨُﺼﻒ ﻓﻲ ﺍﻟﺤﻘﻮﻝ .",
+          desc: "رحلة الذهب الأبيض: من حقول 'شبرا بلولة' إلى العالمية.",
+          link: "report_jasmine.html",
+          img: "imgs/b0925c6e2688fbc6aec21b7bff5aa060e94e0842(1).png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "مخاطر إنتاج العسل.. تهديدات تواجه حياة النحل واستدامة الصناعة",
+          desc: "في حوار مع \"أحمد الصفتاوي\".. نكشف خبايا التحديات والمخاطر التي تهدد استقرار المناحل.",
+          link: "interview_honey.html",
+          img: "imgs/honey_main.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        },
+        {
+          title: "نبض \"المحلة الكبرى\".. ملحمة إعادة إحياء قلعة الصناعة المصرية",
+          desc: "قصة عودة أكبر صرح صناعي في الشرق الأوسط للحياة.",
+          link: "report_textile_factory.html",
+          img: "imgs/textile_factory.png",
+          author: "إيمان منجي عبد الغفار علي الشيخ",
+          date: "30 مارس 2026"
+        },
+        {
+          title: "بين الطين والنار.. مخاطر مهنة الفخار تهدد حياة العاملين",
+          desc: "صراع البقاء في ورش الفرستق: تحديات الأمان المهني في صناعة الفخار.",
+          link: "report_pottery_craft.html",
+          img: "imgs/pottery_risk.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026"
+        }
+      ];
+
+      function getPageFromHash() {
+        const hash = window.location.hash;
+        const match = hash.match(/#page-(\d+)/);
+        return match ? parseInt(match[1]) : 1;
+      }
+
+      function renderInvestigations(page) {
+        const container = document.getElementById("investigations-grid");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        const start = (page - 1) * CARDS_PER_PAGE;
+        const end = start + CARDS_PER_PAGE;
+        const paginatedItems = investigations.slice(start, end);
+
+        paginatedItems.forEach(item => {
+          const cardHtml = `
+            <a href="${item.link}" class="investigation-card">
+              <img src="${item.img}" alt="${item.title}" />
+              <div class="investigation-overlay">
+                <h2>${item.title}</h2>
+                <p>${item.desc}</p>
+                <div class="investigation-meta">
+                  <span class="author"><i class="fa-solid fa-user"></i> ${item.author}</span>
+                  <time datetime="${item.date}">${item.date}</time>
+                </div>
+              </div>
+            </a>
+          `;
+          container.insertAdjacentHTML("beforeend", cardHtml);
+        });
+      }
+
+      function renderPagination(page) {
+        const container = document.getElementById("investigations-pagination");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        const totalPages = Math.ceil(investigations.length / CARDS_PER_PAGE);
+        if (totalPages <= 1) return;
+
+        // Previous button (Right arrow in RTL)
+        const prevBtn = document.createElement("button");
+        prevBtn.className = `page-btn ${page === 1 ? 'disabled' : ''}`;
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        prevBtn.addEventListener("click", () => {
+          if (page > 1) {
+            goToPage(page - 1);
+          }
+        });
+        container.appendChild(prevBtn);
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+          const pageNum = document.createElement("button");
+          pageNum.className = `page-num ${i === page ? 'active' : ''}`;
+          pageNum.innerText = i;
+          pageNum.addEventListener("click", () => {
+            goToPage(i);
+          });
+          container.appendChild(pageNum);
+        }
+
+        // Next button (Left arrow in RTL)
+        const nextBtn = document.createElement("button");
+        nextBtn.className = `page-btn ${page === totalPages ? 'disabled' : ''}`;
+        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        nextBtn.addEventListener("click", () => {
+          if (page < totalPages) {
+            goToPage(page + 1);
+          }
+        });
+        container.appendChild(nextBtn);
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        window.location.hash = `page-${page}`;
+        renderInvestigations(page);
+        renderPagination(page);
+
+        // Scroll to top of grid
+        window.scrollTo({
+          top: document.querySelector(".investigations-page").offsetTop - 40,
+          behavior: "smooth"
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         renderComponents("nav-investigations");
+
+        const initialPage = getPageFromHash();
+        const totalPages = Math.ceil(investigations.length / CARDS_PER_PAGE);
+        currentPage = initialPage >= 1 && initialPage <= totalPages ? initialPage : 1;
+
+        renderInvestigations(currentPage);
+        renderPagination(currentPage);
+
+        window.addEventListener("hashchange", () => {
+          const page = getPageFromHash();
+          if (page !== currentPage && page >= 1 && page <= totalPages) {
+            currentPage = page;
+            renderInvestigations(page);
+            renderPagination(page);
+          }
+        });
       });
     </script>
   </body>

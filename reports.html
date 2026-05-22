@@ -21,6 +21,65 @@
 
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="investigations.css" />
+    <style>
+      .pagination {
+        margin-top: 35px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+      .pagination .page-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #f1f5f9;
+        color: var(--secondary-color);
+        font-weight: 700;
+        transition: all 0.25s ease;
+        text-decoration: none;
+      }
+      .pagination .page-num:hover {
+        background-color: #dde7ef;
+        transform: translateY(-2px);
+      }
+      .pagination .page-num.active {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+        box-shadow: 0 4px 10px rgba(20, 32, 44, 0.15);
+      }
+      .pagination .page-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #f1f5f9;
+        color: var(--secondary-color);
+        transition: all 0.25s ease;
+        text-decoration: none;
+      }
+      .pagination .page-btn:hover {
+        background-color: #dde7ef;
+        transform: translateY(-2px);
+      }
+      .pagination .page-btn.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Placeholder -->
@@ -32,58 +91,12 @@
           <span>•</span> التقارير <span>•</span>
         </h1>
 
-        <div class="investigations-grid">
-          <!-- Card 1 (Top Right in RTL) -->
-          <a href="investigation_flax.html" class="investigation-card">
-            <img src="imgs/flax_main.jpg" alt="زراعة وصناعة الكتان في شبراملس" />
-            <div class="investigation-overlay">
-              <h2>زراعة وصناعة الكتان في شبراملس: الواقع والتحديات</h2>
-              <p>في عاصمة الكتان "شبراملس": كيف يصارع المزارعون والصناع الزمن للحفاظ على هذه الحرفة العريقة في ظل التحديات الاقتصادية وتغيرات السوق?</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> نورهان محمد</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
+        <div class="investigations-grid" id="reports-grid">
+          <!-- Dynamically filled by JavaScript -->
+        </div>
 
-          <!-- Card 2 (Top Left in RTL) -->
-          <a href="report_tires.html" class="investigation-card">
-            <img src="imgs/43948d12749d1b419834e70614de65a1d6c06ecc(1).png" alt="عمال إعادة تدوير الكاوتش" />
-            <div class="investigation-overlay">
-              <h2>"بين مخاطر المهنة وغياب الحماية".. عمال إعادة تدوير الكاوتش في كفر ميت الحارون يواجهون تحديات العمل</h2>
-              <p>في كفر ميت الحارون: كيف تحول "إعادة تدوير الإطارات" من عبء بيئي إلى صناعة حيوية، وما هو الثمن الذي يدفعه العمال في غياب أدوات الحماية والترخيص؟</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> فاطمة زين العابدين إبراهيم</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 3 (Bottom Right in RTL) -->
-          <a href="investigation_furniture.html" class="investigation-card">
-            <img src="imgs/furniture_main.png" alt="صناعة الأثاث في كتامة الغابة" />
-            <div class="investigation-overlay">
-              <h2>بين البقاء والتراجع.. صناعة الأثاث في كتامة الغابة تواجه تحديات العصر</h2>
-              <p>في قرية "كتامة الغابة": كيف يصارع صناع الأثاث المهرة لتمكين حرفتهم من الاستمرار في ظل تصاعد تكاليف الخامات وتغيرات متطلبات السوق الحديث؟</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> إيمان منجي عبد الغفار علي الشيخ</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 4 (Bottom Left in RTL) -->
-          <a href="report_honey_factory.html" class="investigation-card">
-            <img src="imgs/9f4cf70d63fd51fadc2b8d40be11d757fca4d7bf.png" alt="زيوت وصابون كفر الزيات" />
-            <div class="investigation-overlay">
-              <h2>زيوت كفر الزيات".. قلعة "التموين" التي تغذي بيوت المصريين وصراع البقاء في سوق المنافسة</h2>
-              <p>من قلب "كفر الزيات" إلى مائدة كل مصري.. كيف يواجه هذا الصرح الوطني تحديات المنافسة العالمية، وما هو دوره الاستراتيجي في تأمين احتياجات السوق المحلي؟</p>
-              <div class="investigation-meta">
-                <span class="author"><i class="fa-solid fa-user"></i> فاطمة محمود</span>
-                <time datetime="2026-01-16">16 يناير 2026</time>
-              </div>
-            </div>
-          </a>
+        <div class="pagination" id="reports-pagination">
+          <!-- Dynamically filled by JavaScript -->
         </div>
       </div>
     </main>
@@ -93,8 +106,216 @@
 
     <script src="components.js"></script>
     <script>
+      const reports = [
+        {
+          title: "زراعة وصناعة الكتان في شبراملس: الواقع والتحديات",
+          link: "investigation_flax.html",
+          img: "imgs/flax_main.jpg",
+          author: "نورهان محمد",
+          date: "16 يناير 2026",
+          desc: "في عاصمة الكتان \"شبراملس\": كيف يصارع المزارعون والصُنّاع الزمن للحفاظ على هذه الحرفة العريقة في ظل التحديات الاقتصادية وتغيرات السوق؟"
+        },
+        {
+          title: "بين البقاء والتراجع.. صناعة الأثاث في كتامة الغابة تواجه تحديات العصر",
+          link: "investigation_furniture.html",
+          img: "imgs/furniture_main.png",
+          author: "إيمان منجي عبد الغفار علي الشيخ",
+          date: "16 يناير 2026",
+          desc: "في قرية \"كتامة الغابة\": كيف يصارع صنّاع الأثاث المهرة لتمكين حرفتهم من الاستمرار، في ظل تصاعد تكاليف الخامات وتغيرات متطلبات السوق الحديث ؟"
+        },
+        {
+          title: "بين مخاطر المهنة وغياب الحماية.. عمال إعادة تدوير الكاوتش في كفر ميت الحارون يواجهون تحديات العمل",
+          link: "report_tires.html",
+          img: "imgs/43948d12749d1b419834e70614de65a1d6c06ecc(1).png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "في كفر ميت الحارون: كيف تحول \"إعادة تدوير الإطارات\" من عبء بيئي إلى صناعة حيوية، وما هو الثمن الذي يدفعه العمال في غياب أدوات الحماية والترخيص؟"
+        },
+        {
+          title: "\"زيوت كفر الزيات\".. قلعة \"التموين\" التي تغذي بيوت المصريين وصراع البقاء في سوق المنافسة",
+          link: "report_honey_factory.html",
+          img: "imgs/9f4cf70d63fd51fadc2b8d40be11d757fca4d7bf.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "من قلب \"كفر الزيات\" إلى مائدة كل مصري: كيف يواجه هذا الصرح الوطني تحديات المنافسة العالمية، وما هو دوره الاستراتيجي في تأمين احتياجات السوق المحلي؟"
+        },
+        {
+          title: "حرفة تصمد بصعوبة.. الجريد في شبرا النملة بين ضغط التكاليف وتراجع العمالة",
+          link: "report_palm_craft.html",
+          img: "imgs/palm_chair.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "صراع البقاء: تهديد البلاستيك لمستقبل حرفة الجريد العريقة."
+        },
+        {
+          title: "العسل الطبيعي بين الفوائد الصحية ومخاطر الغش التجاري",
+          link: "report_honey_health.html",
+          img: "imgs/honey_factory.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "رحلة \"الذهب السائل\" من خلايا النحل إلى المائدة: كيف يواجه المربون تحديات الإنتاج وضغوط المنافسة لضمان الجودة وحماية المستهلك من الغش؟"
+        },
+        {
+          title: "على طريق بنوفر بكفر الزيات.. مصنع الأسمدة يواصل التوسع والإنتاج وسط حركة تشغيل مستمرة",
+          link: "report_banoufar_factory.html",
+          img: "imgs/factory_main.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "نبض الإنتاج في كفر الزيات: كيف يوازن مصنع الأسمدة بين التوسعات الصناعية المتلاحقة ودوره في دفع عجلة الاقتصاد وتوفير فرص العمل؟"
+        },
+        {
+          title: "الحداد.. قرية لا تنام",
+          link: "report_hadad_village.html",
+          img: "imgs/3ec950cab9da3afd8db068efebf4288c56ec3295(1).png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "كيف تحوّلت بيوت الغربية إلى مصانع شنط؟"
+        },
+        {
+          title: "ﺍﻟﻴﺎﺳﻤﻴﻦ ﻓﻲ ﺷﺒﺮﺍ ﺑﻠﻮﻟﺔ… \"ﺫﻫﺐ ﺃﺑﻴﺾ\" ﻳﺼُﺪﺭَّ ﻟﻠﻌﺎﻟﻢ ﻭﻋﺮﻕ ﻻ ﻳﻨُﺼﻒ ﻓﻲ ﺍﻟﺤﻘﻮﻝ .",
+          link: "report_jasmine.html",
+          img: "imgs/b0925c6e2688fbc6aec21b7bff5aa060e94e0842(1).png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "رحلة الذهب الأبيض: من حقول 'شبرا بلولة' إلى العالمية."
+        },
+        {
+          title: "أسرار من قلب الورشة.. رحلة الفخار من خامات أسوان إلى الأسواق",
+          link: "report_pottery_secrets.html",
+          img: "imgs/f422b83f4e2e325fb479d9ab422c3e3a5289f57e.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "من طين الأرض إلى التحف الفنية: كيف يحول \"صُنّاع الفخار\" المواد الخام إلى حرفة تعكس عراقة الهوية المصرية؟"
+        },
+        {
+          title: "قلعة الصناعة تستعيد بريقها.. \"غزل المحلة\" من حلم \"طلعت حرب\" إلى أكبر مصنع في العالم.",
+          link: "report_textile_factory.html",
+          img: "imgs/textile_factory.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "رحلة إعادة إحياء عملاق المنسوجات: كيف يوازن الصرح التاريخي بين إرث الماضي وطموح الرقمنة للمنافسة عالمياً؟"
+        },
+        {
+          title: "العسل الطبيعي بين الجودة والإنتاج",
+          link: "interview_honey_company.html",
+          img: "imgs/5bf480fab2c02b890141ca450ee42c7a0d99701f.png",
+          author: "شعبة الصحافة",
+          date: "16 يناير 2026",
+          desc: "حوار صحفي مع صاحب شركة لإنتاج العسل"
+        }
+      ];
+
+      const CARDS_PER_PAGE = 4;
+      let currentPage = 1;
+
+      function getPageFromHash() {
+        const hash = window.location.hash;
+        const match = hash.match(/#page-(\d+)/);
+        return match ? parseInt(match[1], 10) : 1;
+      }
+
+      function renderReports(page) {
+        const container = document.getElementById("reports-grid");
+        if (!container) return;
+
+        container.innerHTML = "";
+        
+        const startIndex = (page - 1) * CARDS_PER_PAGE;
+        const endIndex = Math.min(startIndex + CARDS_PER_PAGE, reports.length);
+        const pageReports = reports.slice(startIndex, endIndex);
+
+        pageReports.forEach(report => {
+          const cardHtml = `
+            <a href="${report.link}" class="investigation-card">
+              <img src="${report.img}" alt="${report.title}" />
+              <div class="investigation-overlay">
+                <h2>${report.title}</h2>
+                <p>${report.desc}</p>
+                <div class="investigation-meta">
+                  <span class="author"><i class="fa-solid fa-user"></i> ${report.author}</span>
+                  <time datetime="${report.date}">${report.date}</time>
+                </div>
+              </div>
+            </a>
+          `;
+          container.insertAdjacentHTML("beforeend", cardHtml);
+        });
+      }
+
+      function renderPagination(page) {
+        const container = document.getElementById("reports-pagination");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        const totalPages = Math.ceil(reports.length / CARDS_PER_PAGE);
+        if (totalPages <= 1) return;
+
+        // Previous button (Right arrow in RTL)
+        const prevBtn = document.createElement("button");
+        prevBtn.className = `page-btn ${page === 1 ? 'disabled' : ''}`;
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        prevBtn.addEventListener("click", () => {
+          if (page > 1) {
+            goToPage(page - 1);
+          }
+        });
+        container.appendChild(prevBtn);
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+          const pageNum = document.createElement("button");
+          pageNum.className = `page-num ${i === page ? 'active' : ''}`;
+          pageNum.innerText = i;
+          pageNum.addEventListener("click", () => {
+            goToPage(i);
+          });
+          container.appendChild(pageNum);
+        }
+
+        // Next button (Left arrow in RTL)
+        const nextBtn = document.createElement("button");
+        nextBtn.className = `page-btn ${page === totalPages ? 'disabled' : ''}`;
+        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        nextBtn.addEventListener("click", () => {
+          if (page < totalPages) {
+            goToPage(page + 1);
+          }
+        });
+        container.appendChild(nextBtn);
+      }
+
+      function goToPage(page) {
+        currentPage = page;
+        window.location.hash = `page-${page}`;
+        renderReports(page);
+        renderPagination(page);
+        
+        // Scroll to top of grid/page
+        window.scrollTo({
+          top: document.querySelector(".investigations-page").offsetTop - 40,
+          behavior: "smooth"
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         renderComponents("nav-reports");
+        
+        const initialPage = getPageFromHash();
+        const totalPages = Math.ceil(reports.length / CARDS_PER_PAGE);
+        currentPage = initialPage >= 1 && initialPage <= totalPages ? initialPage : 1;
+        
+        renderReports(currentPage);
+        renderPagination(currentPage);
+
+        window.addEventListener("hashchange", () => {
+          const page = getPageFromHash();
+          if (page !== currentPage && page >= 1 && page <= totalPages) {
+            currentPage = page;
+            renderReports(page);
+            renderPagination(page);
+          }
+        });
       });
     </script>
   </body>
