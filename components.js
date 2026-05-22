@@ -1,14 +1,14 @@
 const headerHTML = `
     <header class="header">
       <div class="container header-container">
-        <div class="logo-area">
+        <a href="index.html" class="logo-area">
           <img src="assets/Logo-removebg.png" alt="كنوز الغربية" class="logo" />
           <div class="datetime">
             <span class="day">الثلاثاء</span>
             <span class="date">3/30/2026</span>
             <span class="time">09:30 PM</span>
           </div>
-        </div>
+        </a>
 
         <nav class="main-nav">
           <ul>
@@ -46,9 +46,9 @@ const footerHTML = `
       <div class="container footer-container">
         <!-- Right Column: About (RTL: Right) -->
         <div class="footer-col about-col">
-          <div class="footer-logo">
+          <a href="index.html" class="footer-logo">
             <img src="assets/lOGO White.png" alt="كنوز الغربية" />
-          </div>
+          </a>
           <p class="about-text">
             "كنوز الغربية" منصة صحافة بيانات متخصصة في رصد وتحليل الواقع الصناعي
             بمحافظة الغربية؛ تقدم قراءة رقمية دقيقة لسوق العمل وحركة الإنتاج،
