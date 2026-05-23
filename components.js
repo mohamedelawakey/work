@@ -99,28 +99,40 @@ const footerHTML = `
 
 const sidebarArticles = [
   {
-    title: "الغزل والنسيج بالمحلة الكبرى.. بين عراقة الماضي وتحديات التطوير",
-    link: "interview_textile.html",
-    img: "imgs/textile_main.png",
-    type: "حوار"
-  },
-  {
-    title: "احمد الصفتاوى أحد مشرفين شركة العسل و نتحدث عن مخاطر المؤثرة على انتاج العسل",
-    link: "interview_honey.html",
+    title: "الصناعات الوطنية بين عراقة الماضي وتحديات التطوير: حوار حول مستقبل الغزل والنسيج بالمحلة الكبرى",
+    link: "interview_mahalla_textile.html",
     img: "imgs/126f668dfdb5d612955e59fdcd54b02bffb4f0da.png",
     type: "حوار"
   },
   {
-    title: "كتان شبراملس.. رزق مهدد بالحرائق وغياب التصنيع",
+    title: "أحمد الصفتاوي لـ(كنوز الغربية ): شبشير الحصة تنتج 70% من عسل مصر.. والمناخ أكبر تحدياتنا.",
+    link: "interview_honey.html",
+    img: "imgs/c46cd8d77a957fad05f31f32c6d7fc56de10a404.png",
+    type: "حوار"
+  },
+  {
+    title: "الكتان في شبراملس ..حكايه رزق مهدده بين الحرائق وغياب التصنيع",
     link: "interview_flax.html",
     img: "imgs/flax_industry.png",
     type: "حوار"
   },
   {
-    title: "\"قلعة الصناعة\" تستعيد بريقها.. \"غزل المحلة\" من حلم \"طلعت حرب\" إلى أكبر مصنع في العالم",
+    title: "قلعة الصناعة تستعيد بريقها.. \"غزل المحلة\" من حلم \"طلعت حرب\" إلى أكبر مصنع في العالم.",
     link: "report_textile_factory.html",
     img: "imgs/textile_factory.png",
     type: "تقارير"
+  },
+  {
+    title: "نبض \"المحلة الكبرى\".. ملحمة إعادة إحياء قلعة الصناعة المصرية",
+    link: "investigation_mahalla_rebuild.html",
+    img: "imgs/126f668dfdb5d612955e59fdcd54b02bffb4f0da.png",
+    type: "تحقيق"
+  },
+  {
+    title: "من السحابة السوداء إلى الوقود البديل.. كفر ميت الحارون تعيد تدوير الإطارات بين إنقاذ البيئة ومخاطر المهنة",
+    link: "investigation_tires_recycling.html",
+    img: "imgs/image copy 5.png",
+    type: "تحقيق"
   },
   {
     title: "ﺍﻟﻴﺎﺳﻤﻴﻦ ﻓﻲ ﺷﺒﺮﺍ ﺑﻠﻮﻟﺔ… \"ﺫﻫﺐ ﺃﺑﻴﺾ\" ﻳﺼُﺪﺭَّ ﻟﻠﻌﺎﻟﻢ ﻭﻋﺮﻕ ﻻ ﻳﻨُﺼﻒ ﻓﻲ ﺍﻟﺤﻘﻮﻝ .",
@@ -129,7 +141,7 @@ const sidebarArticles = [
     type: "تقارير"
   },
   {
-    title: "زيوت كفر الزيات\".. قلعة \"التموين\" التي تغذي بيوت المصريين وصراع البقاء في المنافسة",
+    title: "زيوت كفر الزيات\".. قلعة \"التموين\" التي تغذي بيوت المصريين وصراع البقاء في سوق المنافسة",
     link: "report_honey_factory.html",
     img: "imgs/9f4cf70d63fd51fadc2b8d40be11d757fca4d7bf.png",
     type: "تقارير"
@@ -138,22 +150,22 @@ const sidebarArticles = [
     title: "\"رحيق الكفاح\".. أسرار وتحديات صناعة العسل في الريف المصري",
     link: "report_honey.html",
     img: "imgs/honey_main.png",
-    type: "تقارير"
+    type: "تحقيق"
   },
   {
     title: "صناعة الجلود في \"الحداد\".. إرث حرفي يصارع البقاء",
     link: "report_bags.html",
     img: "imgs/leather_main.png",
-    type: "تقارير"
+    type: "تحقيق"
   },
   {
     title: "وراء الورش.. رحلة \"النشاره\"من مخلفات إلى مصدر رزق في كتامة الغابة",
     link: "report_furniture_craft.html",
     img: "imgs/sawdust_main.png",
-    type: "تقارير"
+    type: "تحقيق"
   },
   {
-    title: "بين مخاطر المهنة وغياب الحماية.. عمال إعادة تدوير الكاوتش في كفر ميت الحارون",
+    title: "بين مخاطر المهنة وغياب الحماية.. عمال إعادة تدوير الكاوتش في كفر ميت الحارون يواجهون تحديات العمل",
     link: "report_tires.html",
     img: "imgs/43948d12749d1b419834e70614de65a1d6c06ecc(1).png",
     type: "تقارير"
@@ -162,13 +174,13 @@ const sidebarArticles = [
     title: "بين فرص العمل ومخاوف التأثيرات.. لماذا تثير مصانع الأسمدة في كفر الزيات تساؤلات",
     link: "report_factory.html",
     img: "imgs/fertilizer_main.png",
-    type: "تقارير"
+    type: "تحقيق"
   },
   {
     title: "على حافة الاختفاء.. كيف تطيح الأقفاص البلاستيكية بحرفة الجريد في شبرا النملة؟",
     link: "report_palm.html",
     img: "imgs/palm_peeling.png",
-    type: "تقارير"
+    type: "تحقيق"
   },
   {
     title: "الكتان في شبراملس.. حرفة الأجداد بين المعاناة وغياب التطور",
@@ -180,13 +192,13 @@ const sidebarArticles = [
     title: "زراعة وصناعة الكتان في شبراملس: الواقع والتحديات",
     link: "investigation_flax.html",
     img: "imgs/flax_main.jpg",
-    type: "تحقيق"
+    type: "تقارير"
   },
   {
     title: "بين البقاء والتراجع.. صناعة الأثاث في كتامة الغابة تواجه تحديات العصر",
     link: "investigation_furniture.html",
     img: "imgs/furniture_workshop.png",
-    type: "تحقيق"
+    type: "تقارير"
   },
   {
     title: "بدائل المستورد والقيمة الاقتصادية لتدوير الكاوتش",
@@ -204,7 +216,7 @@ const sidebarArticles = [
     title: "بين الطين والنار.. مخاطر مهنة الفخار تهدد حياة العاملين",
     link: "report_pottery_craft.html",
     img: "imgs/pottery_risk.png",
-    type: "تقارير"
+    type: "تحقيق"
   },
   {
     title: "مراحل الإنتاج ودورة تجهيز مصانع الفخار بقرية الفرستق",
@@ -225,7 +237,7 @@ const sidebarArticles = [
     type: "تقارير"
   },
   {
-    title: "بنوفر بكفر الزيات.. مصنع الأسمدة يواصل التوسع والإنتاج",
+    title: "على طريق بنوفر بكفر الزيات.. مصنع الأسمدة يواصل التوسع والإنتاج وسط حركة تشغيل مستمرة",
     link: "report_banoufar_factory.html",
     img: "imgs/factory_main.png",
     type: "تقارير"
@@ -237,10 +249,10 @@ const sidebarArticles = [
     type: "تقارير"
   },
   {
-    title: "العسل الطبيعي بين الجودة والإنتاج — حوار مع صاحب شركة إنتاج العسل",
+    title: "العسل الطبيعي بين الجودة والإنتاج",
     link: "interview_honey_company.html",
     img: "imgs/5bf480fab2c02b890141ca450ee42c7a0d99701f.png",
-    type: "حوار"
+    type: "تقارير"
   },
   {
     title: "أسرار من قلب الورشة.. رحلة الفخار من خامات أسوان إلى الأسواق",
@@ -249,7 +261,7 @@ const sidebarArticles = [
     type: "تقارير"
   },
   {
-    title: "الصناعات الوطنية بين عراقة الماضي وتحديات التطوير: الغزل والنسيج بالمحلة الكبرى",
+    title: "الصناعات الوطنية بين عراقة الماضي وتحديات التطوير: حوار حول مستقبل الغزل والنسيج بالمحلة الكبرى",
     link: "interview_mahalla_textile.html",
     img: "imgs/126f668dfdb5d612955e59fdcd54b02bffb4f0da.png",
     type: "حوار"
@@ -261,25 +273,25 @@ const sidebarArticles = [
     type: "حوار"
   },
   {
-    title: "قلاع كفر الزيات الصناعية: قراءة في مستقبل صناعة الزيوت والصابون",
+    title: "قلاع كفر الزيات الصناعية: قراءة في مستقبل صناعة الزيوت والصابون والتحديات الاقتصادية الراهنة",
     link: "interview_oils_factory.html",
     img: "imgs/9f4cf70d63fd51fadc2b8d40be11d757fca4d7bf.png",
     type: "حوار"
   },
   {
-    title: "البطالة في كفر ميت الحارون بين فرص الصناعات المحلية وتحديات سوق العمل",
+    title: "البطالة في كفر ميت الحارون بين فرص الصناعات المحلية وتحديات سوق",
     link: "interview_unemployment.html",
     img: "imgs/93dfe8e106705ecd8b95b8f7aab54adf2e4a09b8.png",
     type: "حوار"
   },
   {
-    title: "أحمد الصفتاوي لـ(كنوز الغربية ): شبشير الحصة تنتج 70% من عسل مصر.. والمناخ أكبر تحدياتنا",
-    link: "interview_honey_sabshir.html",
+    title: "أحمد الصفتاوي لـ(كنوز الغربية ): شبشير الحصة تنتج 70% من عسل مصر.. والمناخ أكبر تحدياتنا.",
+    link: "interview_honey.html",
     img: "imgs/c46cd8d77a957fad05f31f32c6d7fc56de10a404.png",
     type: "حوار"
   },
   {
-    title: "فرص العمل والتنمية الصناعية في كفر الزيات — حوار مع الدكتور عادل عبد المنعم المسدي",
+    title: "فرص العمل والتنمية الصناعية في كفر الزيات\".. حوار مع الأستاذ الدكتور عادل عبد المنعم المسدي",
     link: "interview_kafr_elzayat_development.html",
     img: "imgs/fa68d739a7f4174db1755edcfa73806b2d7d1c8c.png",
     type: "حوار"
@@ -297,9 +309,21 @@ const sidebarArticles = [
     type: "حوار"
   },
   {
-    title: "بنبدأ من 3 الفجر… عاملة ياسمين في شبرا بلولة تكشف كواليس عطر العالم",
+    title: "ﺑﻨﺒﺪﺃ ﻣﻦ 3 ﺍﻟﻔﺠﺮ… ﻋﺎﻣﻠﺔ ﻳﺎﺳﻤﻴﻦ ﻓﻲ ﺷﺒﺮﺍ ﺑﻠﻮﻟﺔ ﺗﻜﺸﻒ ﻛﻮﺍﻟﻴﺲ ﻋﻄﺮ ﺍﻟﻌﺎﻟﻢ",
     link: "interview_jasmine_worker.html",
     img: "imgs/3a37e863f33edd8c02e86d7d4d9056c77683ac08.png",
+    type: "حوار"
+  },
+  {
+    title: "من وهج النار إلى شبح البطالة",
+    link: "interview_hadad_bags.html",
+    img: "imgs/image copy 7.png",
+    type: "حوار"
+  },
+  {
+    title: "عسل النحل ... صناعه تقليديه تواجه تحديات العصر",
+    link: "interview_honey_tradition.html",
+    img: "imgs/image copy 2.png",
     type: "حوار"
   },
   {
@@ -330,6 +354,12 @@ const sidebarArticles = [
     title: "خلف رغوة الصابون.. حكاية عمال يقاومون الزمن في مصنع كفر الزيات",
     link: "report_soap_factory.html",
     img: "imgs/soap_main.png",
+    type: "تحقيق"
+  },
+  {
+    title: "بين المناحل و مصانع العسل ..مخاطر مهنه انتاج العسل تهدد حياة النحل",
+    link: "investigation_honey_risks.html",
+    img: "imgs/honey_main.png",
     type: "تحقيق"
   }
 ];
