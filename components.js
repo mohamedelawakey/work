@@ -3,14 +3,15 @@ const headerHTML = `
       <div class="container header-container">
         <a href="index.html" class="logo-area">
           <img src="assets/Logo-removebg.png" alt="كنوز الغربية" class="logo" />
-          <div class="datetime">
-            <span class="day">الثلاثاء</span>
-            <span class="date">3/30/2026</span>
-            <span class="time">09:30 PM</span>
-          </div>
         </a>
 
-        <nav class="main-nav">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="فتح القائمة">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
           <ul>
             <li><a href="index.html" id="nav-home">الرئيسية</a></li>
             <li><a href="investigations.html" id="nav-investigations">تحقيقات</a></li>
@@ -22,9 +23,6 @@ const headerHTML = `
         </nav>
 
         <div class="header-actions">
-          <a href="#" class="search-icon"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></a>
           <div class="social-icons">
             <a href="#" class="social-icon twitter"
               ><i class="fa-brands fa-twitter"></i
@@ -404,4 +402,21 @@ function renderComponents(activeNavId) {
 
     // Render the dynamic sidebar list with all articles excluding the active one!
     renderSidebar();
+
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mainNav = document.getElementById('main-nav');
+    if (hamburgerBtn && mainNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            mainNav.classList.toggle('open');
+        });
+        // Close menu when a link is clicked
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                mainNav.classList.remove('open');
+            });
+        });
+    }
 }
